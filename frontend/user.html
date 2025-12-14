@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop - User View</title>
+  <link rel="stylesheet" href="./user.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div>
+        <div class="brand">Mini Shop</div>
+        <div class="sub">Trang người dùng (chỉ xem)</div>
+      </div>
+
+      <div class="controls">
+        <input id="q" class="input" placeholder="Tìm sản phẩm..." />
+        <select id="cat" class="input">
+          <option value="">Tất cả danh mục</option>
+        </select>
+        <select id="sort" class="input">
+          <option value="new">Mới nhất</option>
+          <option value="price_asc">Giá tăng dần</option>
+          <option value="price_desc">Giá giảm dần</option>
+          <option value="name_asc">Tên A → Z</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="meta" class="meta"></div>
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty" style="display:none;">
+      Không có sản phẩm phù hợp.
+    </div>
+    <div id="err" class="err" style="display:none;"></div>
+  </main>
+
+  <script>
+    // ĐÚNG với cấu trúc của bạn: backend/ và frontend/api/
+    const API_BASE = "../backend/api";
+  </script>
+  <script src="./user.js"></script>
+</body>
+</html>
